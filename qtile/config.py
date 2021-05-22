@@ -13,17 +13,6 @@ from libqtile.lazy import lazy
 mod = "mod4"
 terminal = "termite"
 
-def hide_show_bar(qtile):
-    """Toggle the eww bar."""
-    script = os.path.expanduser('~/.config/qtile/scripts/toggleBar.sh')
-    subprocess.call([script])
-    bar = qtile.screens[0].top
-    if bar.size == 0:
-        bar.size = 52
-    else:
-        bar.size = 0
-
-
 
 # The keys list defines the key-bindings that qtile uses.You define key-bindings using a Key object,
 # which takes arguments for the keys in the binding, usually the mod key and a letter, then a lazy
